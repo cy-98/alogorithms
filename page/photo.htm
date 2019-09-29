@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background: #ffcccc;
+    }
+    .img-wrapper{
+        display: none;
+        width: 100vw;
+        padding: 20px 50px;
+
+
+    }
+    .img-wrapper>.photo{
+        margin: auto;
+        width: 200px;
+        border: 5px solid #fff;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        display: flex;
+        position: relative;
+        transition: 0.4s;
+    }
+    .img-wrapper>.photo:hover{
+        transform: translateY(-20px);
+    }
+    .img-wrapper>.photo>img{
+        width: 100%;
+    }
+    .img-wrapper>.photo>h1{
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        text-align: right;
+    }
+</style>
+<style>
+    /* animation */
+    .img-wrapper>.photo:nth-child(1){
+        animation: move 1s;
+    }
+    .img-wrapper>.photo:nth-child(2){
+        z-index: 99;
+        animation: move 1.8s;
+    }.img-wrapper>.photo:nth-child(3){
+
+        animation: move 2.5s;
+    }
+    @keyframes move {
+        0%{
+            opacity: 0;
+            transform: translateX(-200%);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+<style>
+    .log{
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+    }
+    .item{
+        color: #f38;
+        border-top : 4px solid #f38;
+        padding-top: 50px;
+        width: 100%;
+    }
+    .item>img{
+        width: 100%;
+    }
+</style>
+<style>
+    .login{
+        width: 100vw;
+        height: 100vh;
+        z-index: 99;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: url('./瀑布流_files/bao.jpeg') #fff center no-repeat;
+        transition: 1s;
+    }
+</style>
+
+<body>
+    <div class="img-wrapper">
+        <div class="photo"><img src="./瀑布流_files/WechatIMG4.jpeg" alt="">
+            <h1>大可爱</h1>
+        </div>
+        <div class="photo"><img src="./瀑布流_files/WechatIMG5.jpeg" alt="">
+            <h1>大宝贝</h1>
+        </div>
+        <div class="photo"><img src="./瀑布流_files/WechatIMG6.jpeg" alt="">
+            <h1>爸爸</h1>
+        </div>
+    </div>
+    <div class="img-wrapper">
+            <div class="photo"><img src="./瀑布流_files/WechatIMG8.jpeg" alt="">
+
+            </div>
+            <div class="photo"><img src="./瀑布流_files/8.jpeg" alt="">
+                <img src="./瀑布流_files/8.jpeg" alt="">
+            </div>
+            <div class="photo"><img src="./瀑布流_files/WechatIMG20.jpeg" alt="">
+
+            </div>
+        </div>
+    <div class="log">
+        <div class="item">
+            9/21
+            <img src="./瀑布流_files/log1.jpeg" alt="">
+        </div>
+        <div class="item">
+                <img src="./瀑布流_files/log2.jpeg" alt="">
+        </div>
+        <div class="item">
+                <img src="./瀑布流_files/log3.jpeg" alt="">
+        </div>
+        <div class="item">
+                <img src="./瀑布流_files/log4.jpeg" alt="">
+        </div>
+        <div class="item">
+                <img src="./瀑布流_files/log5.jpeg" alt="">
+        </div>
+    </div>
+    <h1 style="text-align: center;color: #f38;font-family: fantasy;text-shadow: 1px 1px 5px #f38;">
+        爱你大宝贝
+    </h1>
+    <div class="login">
+
+    </div>
+    <script>
+        window.onload= function(){
+            let imgWrapper = document.querySelectorAll('.img-wrapper');
+            let begin = document.querySelectorAll('.login')[0];
+            begin.addEventListener('click',function(){
+                begin.style.opacity = '0';                
+                imgWrapper[0].style.display = 'flex';
+                imgWrapper[1].style.display = 'flex';
+                document.body.style.overflow = "auto";
+                setTimeout(function(){
+                    begin.style.display = 'none';
+                },500)
+            })
+        }
+    </script>
+</body>
+</html>
