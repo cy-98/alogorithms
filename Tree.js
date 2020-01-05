@@ -112,19 +112,28 @@ Tree.prototype = {
     }
 
 }
-console.log(1)
-var t = new Tree();
-t.insert(3);
-t.insert(1);
-t.insert(2);
-t.insert(5);
-t.insert(7);
-t.insert(11);
-t.insert(33);
-t.insert(22);
 
-console.log(t);
-t.preOrder(t.root);
-console.log(t.getMin());
-console.log(t.getDeep(t.root, 0));
-// console.log(t.getNode(5,t.root));
+
+
+//重建二叉树
+
+// const pre = [1,2,4,7,3,5,6,8]
+// const mid = [4,7,2,1,5,3,8,6]
+
+// /**
+//  * 得到根节点和两子树 递归
+//  * @param {array} pre 
+//  * @param {array} mid 
+//  */
+
+//  function binaryTree (pre,mid){
+//     let root = pre[0]
+//     let mid_left = mid.slice(0,mid.indexOf(root))
+//     let mid_right = mid.slice(mid.indexOf(root)+1)
+
+//     let pre_left = pre.slice(1,mid_left.length)
+//     let pre_right = pre.slice(mid_left.length +1,mid_right.length)
+
+//     this.left = pre_left && mid_left ?  new binaryTree(pre_left,mid_left) : null
+//     this.right = pre_right && mid_right ? new binaryTree(pre_right,mid_right) :null
+//  }
