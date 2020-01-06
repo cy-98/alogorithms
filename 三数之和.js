@@ -14,6 +14,7 @@ function sum(nums='41257145',target = 7) {
             j = i + 1
             k--
         }
+
         if(k === i + 2 ) return map
         if(arr[i] + arr[j++] + arr[k] === target ) {
             map[j] = [arr[i],arr[j],arr[k]]
