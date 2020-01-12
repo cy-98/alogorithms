@@ -70,7 +70,7 @@ const reverseInt = ( int ) => {
                this.i++
                this.output += temp
             }
-
+            
          }
 
          console.log( `${this.charactor}${this.output}` )
