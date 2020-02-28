@@ -3,7 +3,6 @@ function findSort(arr) {
 
     let res = []
 
-    let temp = []
     let l = arr.length
     // let t = 0
     for(let i = 0; i< l ; i ++){
@@ -24,14 +23,23 @@ function findSort(arr) {
             // getItem(subItem)
         }
     }
+
     function newItem(arr,t) {
         let newA = [...arr]
         return [...newA.splice(t,1),...newA]
     }
-    console.log(
-        res
-    )
+    return res
 }
-
 const arr = [1,2,3]
 findSort(arr)
+/**
+ * 
+[
+  [ 1, 3, 2 ],
+  [ 1, 3, 2 ],
+  [ 2, 3, 1 ],
+  [ 2, 3, 1 ],
+  [ 3, 2, 1 ],
+  [ 3, 2, 1 ]
+]
+ */

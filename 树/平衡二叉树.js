@@ -38,6 +38,7 @@ function balance (node) {
 }
 
 console.log(balance(new balanceTree([0])))
+
 var  node = {
     root : 1,
     left : {
