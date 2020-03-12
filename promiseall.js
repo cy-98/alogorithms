@@ -17,6 +17,7 @@ Promise.all = function (arr){
 }
 
 
+
 const p1 = new Promise((resolve,reject)=>{
     setTimeout(() => {
         resolve('p1 not over')
