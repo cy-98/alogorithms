@@ -22,3 +22,8 @@ function sum(nums='41257145',target = 7) {
     }
 }
 console.log(sum())
+
+
+
+
+

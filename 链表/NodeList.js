@@ -27,7 +27,7 @@ class NodeList {
     }
     remove(item) {
         let cur = this.head
-        while( cur.next && cur.next != item) {
+        while(cur.next && cur.next != item) {
             cur = cur.next
             if(cur.next.element === item) { break }
         }
